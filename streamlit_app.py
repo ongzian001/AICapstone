@@ -327,7 +327,7 @@ def methodology_page():
     Please refer to the flowchart below for the overview of the app:
     """)
 
-    image_path = "/workspaces/AICapstone/Flowchart.PNG"
+    image_path = "Flowchart.PNG"
     try:
         image = Image.open(image_path)
         st.image(image, caption='Flowchart of our methodology', use_column_width=True)
