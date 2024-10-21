@@ -265,21 +265,20 @@ def home_page():
 def about_us_page():
     st.title('About Us')
     st.write("""
-    Welcome to the HDB Resale Price Query App! I am a data enthusiast and also a developer and is 
-    part of a team that is passionate about making housing data more accessible and understandable to the public.
+    Welcome to the HDB Resale Price Query App! We are a team of data enthusiasts and developers
+    passionate about making housing data more accessible and understandable to the public.
 
-    We like to provide a user-friendly platform that allows anyone to explore and analyse
+    Our mission is to provide a user-friendly platform that allows anyone to explore and analyze
     HDB resale prices in Singapore. We believe that by making this information more accessible,
     we can help individuals make more informed decisions about housing.
 
     Key Features of Our App:
-    1. Interactive Data Visualisation: Explore HDB resale prices across different years and towns.
+    1. Interactive Data Visualization: Explore HDB resale prices across different years and towns.
     2. AI-Powered Queries: Ask questions about the data and get intelligent responses.
-    3. Up-to-date Information: We link the app to the database of the offical source (data.gov.sg) to ensure you 
-       have access to the latest information.
+    3. Up-to-date Information: We regularly update our database to ensure you have access to the latest information.
 
-    This app was developed as an educational project and should not be used for making real world financial decisions.
-    Always consult with qualified professionals for accurate and personalised advice.
+    This app was developed as an educational project and should not be used for making real-world financial decisions.
+    Always consult with qualified professionals for accurate and personalized advice.
 
     We welcome your feedback and suggestions to improve our app. Thank you for using our service!
     """)
@@ -287,25 +286,23 @@ def about_us_page():
 def methodology_page():
     st.title('Methodology')
     st.write("""
-    Our HDB Resale Price Query App uses a combination of data analysis, visualisation, and artificial intelligence
+    Our HDB Resale Price Query App uses a combination of data analysis, visualization, and artificial intelligence
     to provide insights into HDB resale prices. Here's an overview of our methodology:
 
     1. Data Collection:
        - We source our data from data.gov.sg, which provides official HDB resale transaction data.
-       - The data is collected from data.gov.sg with multiple datasets 
-        (https://data.gov.sg/datasets?topics=housing&page=1&resultId=189) 
-         covering different time periods from 1990 to the present.
+       - The data is collected from multiple datasets covering different time periods from 1990 to the present.
 
     2. Data Processing:
        - We combine all datasets into a single pandas DataFrame for easier analysis.
        - Data is cleaned and preprocessed to ensure consistency and accuracy.
        - We convert date strings to datetime objects and ensure all price data is in the correct numeric format.
 
-    3. Data Visualisation:
-       - We use Plotly Express to create interactive line charts, a plot that is showing average resale prices over time.
+    3. Data Visualization:
+       - We use Plotly Express to create interactive line charts showing average resale prices over time.
        - Users can filter the data by year range and town to focus on specific areas of interest.
 
-    4. AI-Powered Queries (GPT-3.5-turbo model):
+    4. AI-Powered Queries:
        - We utilize OpenAI's GPT-3.5-turbo model to provide intelligent responses to user queries.
        - The AI is provided with a summary of the relevant data to ensure accurate and context-aware responses.
        - We use function calling to allow the AI to request specific data calculations when needed.
@@ -315,8 +312,8 @@ def methodology_page():
          overall average prices and recent trends.
 
     6. Security:
-       - We implement a basic authentication system to password protect for the access to the app and the OpenAI API key.
-         Password could be hashed when keying in.
+       - We implement a basic authentication system to protect access to the app and the OpenAI API key.
+       - User passwords are hashed for security.
 
     Limitations and Disclaimers:
     - This app is for educational purposes only and should not be used for making financial decisions.
@@ -324,10 +321,9 @@ def methodology_page():
     - The data is limited to what is available from data.gov.sg and may not include the most recent transactions.
 
     We are committed to continuously improving our methodology and welcome any suggestions for enhancement.
-    Please refer to the flowchart below for the overview of the app:
     """)
 
-    image_path = "/workspaces/AICapstone/Flowchart.PNG"
+    image_path = "/content/drive/My Drive/Colab Notebooks/Flowchart.PNG"
     try:
         image = Image.open(image_path)
         st.image(image, caption='Flowchart of our methodology', use_column_width=True)
